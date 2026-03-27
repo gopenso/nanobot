@@ -38,5 +38,6 @@ RUN mkdir -p /root/.nanobot
 # Gateway default port
 EXPOSE 18790
 
-ENTRYPOINT ["nanobot"]
-CMD ["status"]
+# No ENTRYPOINT — compatible with Zeabur command override
+# Default: show nanobot status
+CMD ["nanobot", "status"]
